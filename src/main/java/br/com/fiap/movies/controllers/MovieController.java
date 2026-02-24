@@ -1,12 +1,15 @@
 package br.com.fiap.movies.controllers;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class MovieController {
 
+
+    @GetMapping("/")
     public String healthCheck() {
-        return "Server UP";
+        return "<h1>Server UP<h1>";
     }
 
 }
